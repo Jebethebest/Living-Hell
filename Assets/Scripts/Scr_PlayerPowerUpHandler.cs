@@ -89,22 +89,6 @@ public class Scr_PlayerPowerUpHandler : MonoBehaviour
         }
     }
 
-    //private void OnControllerColliderHit(ControllerColliderHit hit)
-    //{
-    //    switch (hit.gameObject.tag)
-    //    {
-    //        case "ExtraPunchPowerup":
-    //            PickupPowerup(Scr_PowerUp.Type.Knockback, hit.gameObject);
-    //            break;
-    //        case "ExtraSpeedPowerup":
-    //            PickupPowerup(Scr_PowerUp.Type.ExtraSpeed, hit.gameObject);
-    //            break;
-    //        case "ExtraJumpsPowerup":
-    //            PickupPowerup(Scr_PowerUp.Type.MultiJump, hit.gameObject);
-    //            break;
-    //    }
-    //}
-
     public bool PickupPowerup(Scr_PowerUp.Type type)
     {
         if (m_HeldPowerup == Scr_PowerUp.Type.Empty)

@@ -162,28 +162,6 @@ public class Scr_Combat : MonoBehaviour
         m_ClosestObject = null;
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "Player" && other.gameObject != gameObject)
-    //    {
-    //        Debug.Log("Punch!");
-    //        Vector3 dir = transform.forward + transform.up;
-    //        other.gameObject.GetComponent<Src_CharacterController>().AddImpact(dir, m_PunchingPower);
-    //        //other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * m_PunchingPower);
-    //        //other.gameObject.GetComponent<Scr_Movement>().SetCanMove(false);
-    //        other.gameObject.GetComponent<Scr_Combat>().SetHitBy(gameObject);
-    //    }
-    //}
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "ThrowableObject" && collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 0)
-    //    {
-    //        Scr_Combat combatScript = GetComponent<Scr_Combat>();
-    //        combatScript.SetHitBy(collision.gameObject);
-    //    }
-    //}
-
     public void SetHitBy(GameObject player)
     {
         m_LastHitBy = player;
@@ -208,7 +186,6 @@ public class Scr_Combat : MonoBehaviour
     {
         GameObject closestObject = null;
         Vector3 position = m_PunchHitBox.transform.position;
-        //Vector3 position = transform.position + transform.forward * m_Length;
         Vector3 scale = Vector3.Scale(transform.localScale * boxScale, m_HalfExtends);
         Collider[] hitColliders = Physics.OverlapBox(position, scale, Quaternion.identity);
         float previousDistance = float.MaxValue;

@@ -35,19 +35,8 @@ public class Scr_PowerupSpawner : MonoBehaviour
 	    }
     }
 
-    //void OnDrawGizmosSelected ()
-    //{
-    //    Gizmos.color = new Color(1, 0, 0, 0.5f);
-    //    Gizmos.DrawCube(transform.localPosition + m_Center, m_Size);
-    //}
-
     private void SpawnPowerup ()
     {
-        //Vector3 position = m_Center + new Vector3(Random.Range(-m_Size.x / 2, m_Size.x / 2), 
-        //                                          Random.Range(-m_Size.y / 2, m_Size.y / 2), 
-        //                                          Random.Range(-m_Size.z / 2, m_Size.z / 2));
-        //Instantiate(m_Powerup, position, Quaternion.identity);
-
         int powerIndex = Random.Range(0, m_Powerups.Length);
         int spawnIndex = Random.Range(0, m_SpawnPoints.Length);
         Vector3 spawnPosition = m_SpawnPoints[spawnIndex].position;
